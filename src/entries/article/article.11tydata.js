@@ -24,7 +24,7 @@ module.exports = {
       return () => article.templateContent
     },
 
-    // this doesn't works
+    // this doesn't work
     articleCategories: (data) => {
       // // hack with declaring deps and macrotask:
       // data.article.data.populatedCategories

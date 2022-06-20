@@ -10,7 +10,7 @@ module.exports = {
       return `/categories/${id}/`
     },
 
-    // this doesn't works
+    // this doesn't work
     populatedArticles: (data) => {
       const { id: categoryId } = data
       const { collections } = data
