@@ -1,0 +1,17 @@
+<h1>
+  {{ categoryTitle }}
+</h1>
+
+<div>
+  {{ categoryContent() | safe }}
+</div>
+
+<ul>
+  {% for article in categoryArticles %}
+    <li>
+      <a href="{{ article.link }}">
+        {{ article.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,32 @@
+{% macro categoryList(categories) %}
+  <ul>
+    {% for category in categories %}
+      <li>
+        <a href="{{ category.link }}">
+          {{ category.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+<article>
+  <h1>{{ articleTitle }}</h1>
+
+  <div>desired:</div>
+  {{ categoryList(categories=articleCategories) }}
+
+  <hr>
+
+  <div>workaround 1:</div>
+  {{ categoryList(categories=articleCategories_workaround_1()) }}
+
+  <hr>
+
+  <div>workaround 2:</div>
+  {{ categoryList(categories=articleCategories_workaround_2) }}
+
+  <div>
+    {{ articleContent() | safe }}
+  </div>
+</article>
